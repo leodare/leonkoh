@@ -1,0 +1,6 @@
+android
+**/.git
+**/node_modules
+commitlint.config.js
+
+

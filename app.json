@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "BestFoody",
+    "slug": "bestfoody",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyAHy_nzXvPFvYPTnU__50f6vvRabYB2WBg"
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "BestFoody needs access to location to show nearby restaurants.",
+        "NSLocationAlwaysUsageDescription": "BestFoody needs access to location to show nearby restaurants."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.bestfoody.app",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAHy_nzXvPFvYPTnU__50f6vvRabYB2WBg"
+        }
+      },
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow BestFoody to use your location to show nearby restaurants."
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "77022a54-ec81-4908-841a-14edca5e103d"
+      }
+    }
+  }
+}

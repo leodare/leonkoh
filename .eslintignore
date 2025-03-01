@@ -1,0 +1,7 @@
+node_modules/
+android
+package.json
+package-lock.json
+yarn.lock
+tsconfig.json
+commitlint.config.js

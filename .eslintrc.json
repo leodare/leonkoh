@@ -1,0 +1,123 @@
+{
+  "extends": [
+    "plugin:react-native/all",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:perfectionist/recommended-natural-legacy"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "react-native",
+    "import",
+    "perfectionist",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-require-imports": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unsafe-enum-comparison": "error",
+    "react/prefer-read-only-props": "error",
+    "@typescript-eslint/await-thenable": "error",
+    "@typescript-eslint/no-deprecated": "warn",
+    "@typescript-eslint/no-unsafe-declaration-merging": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "prefer-template": "error",
+    "no-console": "off",
+    "import/no-duplicates": ["error", { "prefer-inline": true }],
+    "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      {
+        "props": "never",
+        "children": "ignore"
+      }
+    ],
+    "react-native/sort-styles": [
+      "error",
+      "asc",
+      {
+        "ignoreClassNames": false,
+        "ignoreStyleProperties": false
+      }
+    ],
+    "eqeqeq": "error",
+    "react/jsx-sort-props": "off",
+    "perfectionist/sort-jsx-props": [
+      "warn",
+      {
+        "type": "natural",
+        "ignoreCase": true
+      }
+    ],
+    "perfectionist/sort-objects": [
+      "warn",
+      {
+        "type": "natural",
+        "ignoreCase": true
+      }
+    ],
+    "perfectionist/sort-imports": [
+      "warn",
+      {
+        "type": "natural",
+        "groups": [
+          ["builtin", "external"],
+          "internal",
+          ["parent", "sibling"],
+          "index"
+        ],
+        "newlinesBetween": "always"
+      }
+    ],
+    "react-native/no-inline-styles": "off",
+    "react-native/no-color-literals": "off",
+    "react-native/no-unused-styles": "warn",
+    "react-native/no-raw-text": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unsafe-unary-minus": "error",
+    "@typescript-eslint/prefer-for-of": "error",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/prefer-find": "error",
+    "@typescript-eslint/prefer-literal-enum-member": "error",
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
+    "@typescript-eslint/prefer-string-starts-ends-with": "error",
+    "@typescript-eslint/prefer-readonly-parameter-types": "off",
+    "import/no-named-as-default-member": "off",
+    "import/no-named-as-default": "off"
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      },
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "react-native/react-native": true
+  }
+}
